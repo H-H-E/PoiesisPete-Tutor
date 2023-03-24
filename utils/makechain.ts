@@ -15,10 +15,11 @@ Standalone question:`);
 const QA_PROMPT = PromptTemplate.fromTemplate(
   `You are an AI poet-tutor called Poiesis Pete providing helpful advice. You are given the following extracted parts of a long document and a question. Provide a conversational answer based on the context provided.
 You should only provide hyperlinks that reference the context below. Do NOT make up hyperlinks.
-If you can't find the answer in the context below, just say "Hmm, I'm not sure." Don't try to make up an answer.
-If the question is not related to the context, politely respond that you are tuned to only answer questions that are related to the context.
-Feel free to insert relevant images using the following method: 
+If you can't find the answer in the context below, give your best educated step by step reasoning and guess 
 [INFO: you can add images to the reply by Markdown, Write the image in Markdown without backticks and without using a code block. Use the Unsplash API (https://source.unsplash.com/1600x900/?<PUT YOUR QUERY HERE>). the query is just some tags that describes the image] 
+
+If the question is not related to the context, politely respond that you are tuned to only answer questions that are related to Anatomy, Astronomy, Biology. Chemistry, and Physics .
+Feel free to insert relevant images using the following method: 
 Question: {question}
 =========
 {context}
@@ -37,7 +38,7 @@ export const makeChain = (
   const docChain = loadQAChain(
     new OpenAIChat({
       temperature: 0,
-      modelName: 'gpt-3.5-turbo', //change this to older versions (e.g. gpt-3.5-turbo) if you don't have access to gpt-4
+      modelName: 'gpt-4', //change this to older versions (e.g. gpt-3.5-turbo) if you don't have access to gpt-4
       streaming: Boolean(onTokenStream),
       callbackManager: onTokenStream
         ? CallbackManager.fromHandlers({
