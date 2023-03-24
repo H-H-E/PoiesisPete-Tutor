@@ -17,6 +17,7 @@ specifiers:
   lucide-react: ^0.125.0
   next: 13.2.3
   pdf-parse: 1.1.1
+  pnpm: ^7.30.0
   postcss: ^8.4.21
   prettier: ^2.8.4
   react: 18.2.0
@@ -37,6 +38,7 @@ dependencies:
   lucide-react: 0.125.0_react@18.2.0
   next: 13.2.3_biqbaboplfbrettd7655fr4n2y
   pdf-parse: 1.1.1
+  pnpm: 7.30.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-markdown: 8.0.5_pmekkgnqduwlme35zpnqhenc34
@@ -3500,6 +3502,12 @@ packages:
     resolution: {integrity: sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /pnpm/7.30.0:
+    resolution: {integrity: sha512-6SUdrWSZ4qvQ4uBVg7smnabVKOFrT7DgSz2NfViG54nRii4ODB395qmHprBiv5WBdlC/jZYBn99fSfmzIMI3WQ==}
+    engines: {node: '>=14.6'}
+    hasBin: true
+    dev: false
 
   /postcss-import/14.1.0_postcss@8.4.21:
     resolution: {integrity: sha512-flwI+Vgm4SElObFVPpTIT7SU7R3qk2L7PyduMcokiaVKuWv9d/U+Gm/QAd8NDLuykTWTkcrjOeD2Pp1rMeBTGw==}
